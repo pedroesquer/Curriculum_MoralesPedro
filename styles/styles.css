@@ -1,10 +1,15 @@
+@import url('globals.css');
+
+
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f9f9f9;
+    background-color: var(--color-secundario);
     color: #333;
 }
+
+
 header {
     background-color: #fff;
     padding: 20px;
@@ -14,13 +19,23 @@ header {
     text-align: center;
 }
 
+
+header img {
+    float: left;
+    margin: 0 20px 20px 0;
+    border: 2px solid var(--color-principal);
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
+}
+
+
 nav {
-    background-color: #004080;
+    background-color: var(--color-nav);
     padding: 10px 20px;
     position: sticky;
     top: 0;
     z-index: 100;
-    
 }
 
 nav a {
@@ -30,41 +45,76 @@ nav a {
     font-weight: bold;
 }
 
+nav a:visited {
+    color: lightgray;
+}
 nav a:hover {
+    color: yellow;
     text-decoration: underline;
 }
 
+
 h1, h2, h3 {
-    color: #004080;
+    color: var(--color-principal);
     margin-bottom: 10px;
+}
+
+h2::before {
+    content: "★ ";
+    color: gold;
 }
 
 section, div {
     margin: 20px auto;
-    padding: 15px;
+    padding: var(--espaciado);
     max-width: 900px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
+#educacion {
+    border: 3px solid var(--color-principal);
+    padding: 20px;
+    margin: 20px auto;
+}
+
+#descripcion {
+    width: 600px;
+    height: 150px;
+    overflow: auto;
+    border: 3px solid var(--color-principal);
+
+}
+
+#experiencialaboral{
+    border: 3px solid var(--color-principal);
+    padding: 20px;
+    margin: 20px auto;
+}
+
+#idiomas{
+    border: 3px solid var(--color-principal);
+    padding: 20px;
+    margin: 20px auto;
+}
+#personales li {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+    margin-bottom: 10px;
+}
+
+
 ul {
     padding-left: 20px;
 }
-
 li {
     margin-bottom: 10px;
 }
 
-img {
-    border: 2px solid #004080;
-    border-radius: 5px;
-    max-width: 100%;
-    height: auto;
-}
-
 footer {
-    background-color: #004080;
+    background-color: var(--color-nav);
     color: black;
     text-align: center;
     padding: 10px;
